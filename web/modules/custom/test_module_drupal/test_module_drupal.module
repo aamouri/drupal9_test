@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Exposes global functionality for test_drupal module.
+ */
+
+use Drupal\node\NodeInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+
+/**
+ * Implements hook_cron().
+ *
+ * Queues to unpublish passed events.
+ */
+function test_module_drupal_cron() {
+  $queue = \Drupal::queue('queue_unpublish_events');
+
+  $now = new DrupalDateTime('now');
+
+  $passed_events = \Drupal::entityQuery('node')
+    ->condition('type', 'event')
+    ->condition('field_date_end', $now, '<')
+    ->condition('status', NodeInterface::PUBLISHED)
+    ->execute();
+
+  if ($passed_events) {
+    $queue->createItem($passed_events);
+  }
+
+}

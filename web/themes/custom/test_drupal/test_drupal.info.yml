@@ -2,11 +2,21 @@ name: Test Drupal
 type: theme
 description: 'An empty theme with classy as base. Feel free to change its base theme.'
 core_version_requirement: ^8 || ^9
+
+base theme: classy
+
+regions:
+  sidebar_first: "Sidebar first"
+  sidebar_second: "Sidebar second"
+  content_header: "Content header"
+  content: "Content"
+  header: "Header"
+  primary_menu: "Primary menu"
+  secondary_menu: "Secondary menu"
+  footer: "Footer"
+  highlighted: "Highlighted"
+  help: "Help"
+  breadcrumb: "Breadcrumb"
+
 libraries:
   - test_drupal/main
-base theme: classy
-regions:
-  header: Header
-  content: Content
-  sidebar_first: 'Sidebar first'
-  footer: Footer

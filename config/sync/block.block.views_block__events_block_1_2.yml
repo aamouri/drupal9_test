@@ -1,0 +1,33 @@
+uuid: a5040b26-0c3e-43b9-90cc-8cd52fe87100
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - node
+    - views
+  theme:
+    - test_drupal
+id: views_block__events_block_1_2
+theme: test_drupal
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:events-block_1'
+settings:
+  id: 'views_block:events-block_1'
+  label: 'Same Events'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'Same Events'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event
