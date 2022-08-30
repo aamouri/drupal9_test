@@ -1,4 +1,4 @@
-uuid: 6f1cfc6a-eacc-4fe9-beb3-110d3c7d5744
+uuid: 46201b6a-e7c3-4570-a9d3-a9ace8674229
 langcode: fr
 status: true
 dependencies:
@@ -7,16 +7,16 @@ dependencies:
   theme:
     - bartik
 _core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
 id: bartik_help
 theme: bartik
 region: content
-weight: -30
+weight: -5
 provider: null
 plugin: help_block
 settings:
   id: help_block
-  label: Aide
-  provider: help
+  label: Help
   label_display: '0'
+  provider: help
 visibility: {  }

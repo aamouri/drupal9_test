@@ -1,22 +1,22 @@
-uuid: 657b6861-38ee-4ea4-9357-9d66177de363
+uuid: 127f442c-2cea-4c6b-a4dd-2973269625e9
 langcode: fr
 status: true
 dependencies:
   theme:
     - bartik
 _core:
-  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
 id: bartik_local_tasks
 theme: bartik
 region: content
-weight: -40
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: Onglets
-  provider: core
+  label: Tabs
   label_display: '0'
+  provider: core
   primary: true
   secondary: true
 visibility: {  }

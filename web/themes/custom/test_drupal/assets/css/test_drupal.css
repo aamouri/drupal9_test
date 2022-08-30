@@ -1,0 +1,473 @@
+@font-face {
+  font-family: metropolis;
+  src:
+    url("../fonts/metropolis/Metropolis-Regular.woff2") format("woff2"),
+    url("../fonts/metropolis/Metropolis-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: metropolis;
+  src:
+    url("../fonts/metropolis/Metropolis-Bold.woff2") format("woff2"),
+    url("../fonts/metropolis/Metropolis-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: metropolis;
+  src:
+    url("../fonts/metropolis/Metropolis-SemiBold.woff2") format("woff2"),
+    url("../fonts/metropolis/Metropolis-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* lora-regular - latin */
+
+@font-face {
+  font-family: Lora;
+  src:
+    local("Lora Regular"),
+    local("Lora-Regular"),
+    url("../fonts/lora/lora-v14-latin-regular.woff2") format("woff2"),
+    url("../fonts/lora/lora-v14-latin-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* lora-italic - latin */
+
+@font-face {
+  font-family: Lora;
+  src:
+    local("Lora Italic"),
+    local("Lora-Italic"),
+    url("../fonts/lora/lora-v14-latin-italic.woff2") format("woff2"),
+    url("../fonts/lora/lora-v14-latin-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* lora-700 - latin */
+
+@font-face {
+  font-family: Lora;
+  src:
+    local("Lora Bold"),
+    local("Lora-Bold"),
+    url("../fonts/lora/lora-v14-latin-700.woff2") format("woff2"),
+    url("../fonts/lora/lora-v14-latin-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "metropolis", sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6875rem;
+}
+
+body {
+  margin: 0;
+  color: #313637;
+  background-color: #f7f9fa;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='50' height='84' viewBox='0 0 50 84'%3e  %3cpath opacity='0.05' fill='%230e6ba6' d='M25,61.7C25,68.5,19.4,74,12.5,74S0,68.5,0,61.7c0-5.7,3.9-9.6,7.4-12.9c2.3-2.2,4.5-4.4,5.1-6.8c0.7,2.4,2.8,4.6,5.1,6.8C21.1,52.2,25,56,25,61.7z M42.6,6.8c-2.3-2.2-4.5-4.4-5.1-6.8c-0.7,2.4-2.9,4.6-5.1,6.8C28.9,10.2,25,14,25,19.7C25,26.5,30.6,32,37.5,32S50,26.5,50,19.7C50,14,46.1,10.2,42.6,6.8z'/%3e%3c/svg%3e");
+  background-position: top left /* LTR */
+}
+
+a {
+  color: #003248;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 1em 0 0.5em;
+  color: #000;
+  font-size: 1.357em;
+  font-weight: inherit;
+}
+h2 {
+  margin: 1em 0 0.5em;
+  font-size: 1.143em;
+  font-weight: inherit;
+}
+h3 {
+  margin: 1em 0 0.5em;
+  font-size: 1.092em;
+  font-weight: inherit;
+}
+h4 {
+  margin: 1em 0 0.5em;
+  font-size: 1.05em;
+  font-weight: inherit;
+}
+h5 {
+  margin: 1em 0 0.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.889em;
+  font-weight: inherit;
+}
+h6 {
+  margin: 1em 0 0.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.67em;
+  font-weight: inherit;
+}
+p {
+  margin: 0 0 1.2em;
+}
+
+#block-test-drupal-page-title h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  #block-test-drupal-page-title h1 {
+    font-size: 1.5rem;
+  }
+}
+
+#lightbox {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+nav > ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+}
+
+.layout-container > main {
+  max-width: 60rem;
+  margin: 4rem auto;
+}
+.layout-container > header {
+  display: flex;
+  justify-content: center;
+  color: #e0e1dd;
+  background-color: #003248;
+}
+.layout-container > header a {
+  color: #e0e1dd;
+}
+
+#block-test-drupal-page-title {
+  margin-bottom: 2rem;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.events-list > li {
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 15rem auto;
+  grid-template-rows: repeat(2, auto);
+}
+.events-list > li figure {
+  margin: 0;
+  grid-row: 1/-1;
+}
+.events-list > li > h2, .events-list > li > article {
+  grid-column-start: 2;
+}
+
+.pager__items {
+  display: flex;
+}
+.pager__items a {
+  color: #202280;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+  background-color: #e14343;
+}
+.pager__items a:hover {
+  color: #fff;
+  background-color: #221948;
+}
+
+
+.text-content,
+.cke_editable {
+  color: #313637;
+  font-family: "Lora", "georgia", serif;
+  line-height: 1.6875rem
+
+  /*
+    @todo
+
+    text-decoration-thickness is supported by FF & Safari
+    text-underline-offset is supported by Safari
+
+    text-decoration-color supported by Chrome, FF, & Safari
+  */
+}
+
+.text-content a:not(.button), .cke_editable a:not(.button) {
+  color: #0d77b5;
+  -webkit-text-decoration-color: #0d77b5;
+  text-decoration-color: #0d77b5;
+  text-decoration-thickness: 2px;
+  word-wrap: break-word
+}
+
+@supports (box-shadow: none) {
+
+  .text-content a:not(.button), .cke_editable a:not(.button) {
+    transition: box-shadow 0.3s cubic-bezier(0.55, 0.085, 0, 0.99);
+    text-decoration: none;
+    box-shadow: inset 0 -2px 0 0 #2494db
+  }
+
+  .text-content a:not(.button):hover, .cke_editable a:not(.button):hover {
+    text-decoration: underline;
+    color: #000;
+
+    /* @todo - #d9ecfa isn't currently a variable. */
+    box-shadow: inset 0 -2em 0 0 #d9ecfa;
+    -webkit-text-decoration-color: #d9ecfa;
+    text-decoration-color: #d9ecfa;
+  }
+}
+
+.text-content p, .cke_editable p {
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem
+}
+
+.text-content p:first-child, .cke_editable p:first-child {
+  margin-top: 0;
+}
+
+.text-content p:last-child, .cke_editable p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 43.75rem) {
+
+  .text-content p, .cke_editable p {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem
+  }
+}
+
+.text-content code, .cke_editable code {
+  background-color: #f7f9fa;
+}
+
+[dir="ltr"] .text-content pre code,[dir="ltr"]  .cke_editable pre code {
+  padding-left: 1.125rem
+}
+
+[dir="rtl"] .text-content pre code,[dir="rtl"]  .cke_editable pre code {
+  padding-right: 1.125rem
+}
+
+[dir="ltr"] .text-content pre code,[dir="ltr"]  .cke_editable pre code {
+  padding-right: 1.125rem
+}
+
+[dir="rtl"] .text-content pre code,[dir="rtl"]  .cke_editable pre code {
+  padding-left: 1.125rem
+}
+
+.text-content pre code, .cke_editable pre code {
+  display: block;
+  overflow: auto;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  color: #6e7172;
+}
+
+[dir="ltr"] .text-content blockquote,[dir="ltr"]  .cke_editable blockquote {
+  margin-left: 0
+}
+
+[dir="rtl"] .text-content blockquote,[dir="rtl"]  .cke_editable blockquote {
+  margin-right: 0
+}
+
+[dir="ltr"] .text-content blockquote,[dir="ltr"]  .cke_editable blockquote {
+  margin-right: 0
+}
+
+[dir="rtl"] .text-content blockquote,[dir="rtl"]  .cke_editable blockquote {
+  margin-left: 0
+}
+
+[dir="ltr"] .text-content blockquote,[dir="ltr"]  .cke_editable blockquote {
+  padding-left: 2.25rem
+}
+
+[dir="rtl"] .text-content blockquote,[dir="rtl"]  .cke_editable blockquote {
+  padding-right: 2.25rem
+}
+
+.text-content blockquote, .cke_editable blockquote {
+  position: relative;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+  letter-spacing: -0.01em;
+  font-family: "Lora", "georgia", serif;
+  font-size: 1.3125rem;
+  line-height: 2.25rem
+}
+
+[dir="ltr"] .text-content blockquote:before,[dir="ltr"]  .cke_editable blockquote:before {
+  left: 0
+}
+
+[dir="rtl"] .text-content blockquote:before,[dir="rtl"]  .cke_editable blockquote:before {
+  right: 0
+}
+
+.text-content blockquote:before, .cke_editable blockquote:before {
+  position: absolute;
+  top: 0;
+  content: "“";
+  color: #53b0eb;
+  font-size: 3.375rem;
+}
+
+[dir="ltr"] .text-content blockquote:after,[dir="ltr"]  .cke_editable blockquote:after {
+  left: 0
+}
+
+[dir="rtl"] .text-content blockquote:after,[dir="rtl"]  .cke_editable blockquote:after {
+  right: 0
+}
+
+[dir="ltr"] .text-content blockquote:after,[dir="ltr"]  .cke_editable blockquote:after {
+  margin-left: 0.25rem
+}
+
+[dir="rtl"] .text-content blockquote:after,[dir="rtl"]  .cke_editable blockquote:after {
+  margin-right: 0.25rem
+}
+
+.text-content blockquote:after, .cke_editable blockquote:after {
+  position: absolute;
+  bottom: 0;
+  width: 0.5625rem;
+  height: calc(100% - 1.875rem);
+  content: "";
+  background: #f7f9fa;
+}
+
+@media (min-width: 43.75rem) {
+
+  .text-content blockquote, .cke_editable blockquote {
+    font-size: 2rem;
+    line-height: 3.375rem
+  }
+}
+
+@media (min-width: 62.5rem) {
+
+  .text-content blockquote, .cke_editable blockquote {
+    font-size: 2.5rem;
+    line-height: 3.9375rem
+  }
+}
+
+@media (min-width: 43.75rem) {
+
+  .text-content,
+  .cke_editable {
+    font-size: 1.125rem;
+    line-height: 2.25rem
+  }
+}
+
+/**
+ * Special colors for footer that has a dark background.
+ */
+
+.site-footer .text-content {
+  color: inherit
+}
+
+.site-footer .text-content * {
+  color: inherit;
+}
+
+.site-footer .text-content a {
+  text-decoration: underline;
+  color: #fff;
+  box-shadow: none
+}
+
+.site-footer .text-content a:hover {
+  text-decoration: none;
+  color: #fff;
+  box-shadow: none;
+}
+
+/**
+ * Decrease font-size for blockquote placed in sidebar region.
+ */
+
+@media (min-width: 62.5rem) {
+
+  .region--sidebar .text-content blockquote {
+    font-size: 1.5rem;
+    line-height: 2.25rem
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+#block-views-block-events-block-1-2, #block-views-block-events-block-1-2 h2, #block-views-block-events-block-1-2 button.update-background-color  {
+  display: none;
+}
+
+div.views-row-event {
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border-bottom: #1a3570 groove;
+}

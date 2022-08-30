@@ -18,3 +18,5 @@
 /.idea/
 ._.DS_Store
 .DS_Store
+/.env
+/web/sites/default/services.yml
